@@ -1,0 +1,183 @@
+/*########################
+Approach to the layout:
+(1) Vertically and horizontally center the product card
+(2) Use flexbox to horizontally align those two halves ~ equal widths
+  (2m) Use a flex-direction of column on mobile to stack the image/info  
+##########################*/
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  /* Standard font-weight and color */
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*########################
+Font Styles 
+##########################*/
+h1 {
+  color: hsl(212, 21%, 14%);
+  font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 2.20rem;
+  line-height: 1;
+
+  padding-bottom: 20px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.30rem;
+
+  padding-bottom: 20px;
+}
+
+p {
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+p.reduced {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+}
+
+p.original {
+  text-decoration: line-through;
+}
+
+/*########################
+Button Styles 
+##########################*/
+
+.btn-primary {
+  background-color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05rem;
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+}
+
+.btn-primary i {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-image: url('../images/icon-cart.svg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(0, 2px);
+  margin-right: 10px;
+}
+
+.btn-primary:hover {
+  background-color: hsl(156, 42%, 18%);
+  cursor: pointer;
+}
+
+/*########################
+Flexbox // Layout Styles 
+##########################*/
+.flex-container {
+  /* Vertically and horizontally center the product card on the page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.product {
+  /* Establish dimensions and background color */
+  width: 600px;
+  min-height: 450px;
+  background-color: white;
+  
+  /* Apply border radius to product card */
+  overflow: hidden;
+  border-radius: 10px;
+  
+  display: flex;
+  /* default flex */
+  flex: 0 1 auto;
+  flex-flow: row nowrap;
+}
+
+.product__image,
+.product__info {
+  width: 50%;
+}
+
+.product__image {
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.product__info {
+  padding: 30px;
+}
+
+
+.product__pricing {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/*########################
+Media Queries
+##########################*/
+@media screen and (min-width: 769px) {
+  .product__image {
+    background-image: url('../images/image-product-desktop.jpg');
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  /* Adjust flexbox layout for mobile */
+  .product {
+    width: 340px;
+    height: auto;
+    flex-flow: column nowrap;
+  }
+  .product__image,
+  .product__info {
+    width: 100%;
+  }
+
+  /* Load in the mobile image for mobile devices */
+  .product__image {
+    height: 240px;
+    background-image: url('../images/image-product-mobile.jpg');
+  }
+
+  /* Adjust content spacing on mobile */
+  .product__info {
+    padding: 25px;
+  }
+  h1, h2 {
+    padding-bottom: 10px;
+  }
+  .product__pricing {
+    padding: 5px 0;
+  }
+}
+
+/*########################
+Attribution Styles
+##########################*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
