@@ -44,8 +44,17 @@ Users should be able to:
 
 
 ### What I learned
-- LATER
+- A deeper understanding of practical FlexBox use
+- Refreshed my memory on a bunch of CSS properties
+- Refreshed my memory of using Git and GitHub
+- There are A LOT of new CSS features that I need to learn about and start implementing in future projects. 
 
+### What's next?
+- Continue practicing layouts with FlexBox
+- Read up on accessibility best practices
+- Learn about custom variables
+- Refactor this code (down the line)
+- Complete another 'Newbie' FrontEnd Mentor project
 
 ## Author
 - Ryan Hemrick
