@@ -12,6 +12,10 @@ body {
   font-weight: 500;
   color: hsl(228, 12%, 48%);
 
+  /* Vertically and horizontally center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100%;
 }
 
@@ -92,13 +96,6 @@ Button Styles
 /*########################
 Flexbox // Layout Styles 
 ##########################*/
-.flex-container {
-  /* Vertically and horizontally center the product card on the page */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
 
 .product {
   /* Establish dimensions and background color */
