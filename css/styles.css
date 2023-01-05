@@ -74,6 +74,8 @@ Button Styles
   border-radius: 10px;
   border: none;
   padding: 15px;
+
+  cursor: pointer;
 }
 
 .btn-primary i {
@@ -90,7 +92,6 @@ Button Styles
 
 .btn-primary:hover {
   background-color: hsl(156, 42%, 18%);
-  cursor: pointer;
 }
 
 /*########################
@@ -126,7 +127,6 @@ Flexbox // Layout Styles
 .product__info {
   padding: 30px;
 }
-
 
 .product__pricing {
   padding: 15px 0;
