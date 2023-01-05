@@ -11,6 +11,8 @@ body {
   /* Standard font-weight and color */
   font-weight: 500;
   color: hsl(228, 12%, 48%);
+
+  min-height: 100%;
 }
 
 img {
@@ -95,7 +97,7 @@ Flexbox // Layout Styles
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .product {
@@ -179,5 +181,19 @@ Media Queries
 /*########################
 Attribution Styles
 ##########################*/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 2px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-white);
+  z-index: -1;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}

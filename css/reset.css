@@ -27,8 +27,7 @@ html:focus-within {
 }
 
 /* Custom property from Kevin Powell */
-html,
-body {
+html {
   height: 100%;
 }
 
